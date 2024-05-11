@@ -4,7 +4,7 @@ import tensorflow as tf
 
 from drug_molecule_gen.config import config
 
-def load_daatset(file_name):
+def load_dataset(file_name):
 
     file_path = os.path.join(config.DATAPATH,file_name)
     data = pd.read_csv(file_path)
