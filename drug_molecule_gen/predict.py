@@ -4,6 +4,7 @@ import numpy as np
 from keras.models import Model
 from keras.layers import Input
 
+
 from drug_molecule_gen.config import config
 from drug_molecule_gen.preprocessing.data_management import load_dataset,load_nn_model
 import drug_molecule_gen.preprocessing.preprocessors as pp

@@ -42,4 +42,8 @@ def encoder_decoder_with_attn_mech():
                        name="decoder_output")(dec_dense_input)
     
     
-    return Model(inputs=[enc_input,dec_input],outputs=dec_output)
+    drug_discovery_model = Model(inputs=[enc_input,dec_input],outputs=dec_output)
+
+    drug_discovery_model.compile(loss="categorical_crossentropy",metrics=["Accuracy"])
+
+    return drug_discovery_model
