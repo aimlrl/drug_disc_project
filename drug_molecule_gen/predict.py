@@ -89,7 +89,7 @@ def generate_molecule(enc_inp_sequence,batch_size):
 if __name__=='__main__':
     single_input = X_cv[random.randint(0,X_cv.shape[0]),:]
     single_input = single_input.reshape(1,single_input.shape[0])
-    gen_mol = generate_molecule(single_input)
+    gen_mol = generate_molecule(single_input,1)
     print(gen_mol)
 
 
