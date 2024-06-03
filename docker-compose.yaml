@@ -14,7 +14,7 @@ services:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: db_mlflow
       MYSQL_USER: mlflow_user
-      MYSQL_USER_PASSWORD: mlflow
+      MYSQL_PASSWORD: mlflow
     restart: always
 
   mlflow:
@@ -38,7 +38,7 @@ services:
     build:
       context: ./
       dockerfile: Dockerfile
-    container_name: drug_discovery
+    container_name: model_container
     volumes:
       - ./app_data:/app/app_data
     depends_on:

@@ -1,8 +1,8 @@
-#!/bin/bash
+#!usr/bin/env bash
 
 /etc/init.d/mysql start
 
-sleep 30
+sleep 10
 
 mysql --user=root <<EOF
 ALTER USER 'root'@'localhost' IDENTIFIED BY 'root';
@@ -15,6 +15,7 @@ GRANT ALL ON db_mlflow.* TO 'mlflow_user'@'localhost';
 FLUSH PRIVILEGES;
 CREATE DATABASE IF NOT EXISTS db_mlflow;
 SHOW DATABASES;
+exit
 EOF
 
 tail -f /var/log/mysql/error.log
