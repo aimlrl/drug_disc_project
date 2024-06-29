@@ -28,6 +28,4 @@ RUN chmod +x /app/drug_molecule_gen/predict.py
 
 RUN chmod +x /app/main.py
 
-#ENTRYPOINT ["python3"]
-
 CMD pip install -e .
